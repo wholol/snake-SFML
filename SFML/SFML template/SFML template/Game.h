@@ -27,6 +27,7 @@ private:
 
 	bool quitgame = false;			//quit game
 	bool MainMenu = true;
+	sf::Music mainmusic;
 
 	int FrameCounter = 0;						//frame counter
 	static constexpr int FramePeriod = 7;		//frame period

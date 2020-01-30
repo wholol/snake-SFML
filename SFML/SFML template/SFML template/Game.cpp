@@ -7,6 +7,12 @@ Game::Game(int screenwidth, int screenheight, const std::string& title, int fram
 	snake( { 2, 2 }),
 	food(board)
 {
+	
+	mainmusic.openFromFile("Harmony.ogg");
+	mainmusic.setLoop(true);
+	mainmusic.setVolume(75);
+	mainmusic.play();
+	
 
 }
 

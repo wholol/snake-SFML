@@ -34,7 +34,7 @@ private:
 private:
 	
 	std::vector<Segments> segment;
-	static constexpr int segmentNumber = 200;
+	static constexpr int segmentNumber = 600;
 	int segmentCounter = 1;		//counter should not exceed 199.
 	
 
