@@ -6,9 +6,6 @@ Food::Food(const Board& board)
 	Ypos(0, board.GetyTilesNum() - 1),
 	rng(std::random_device ()())
 {
-	
-	
-	
 	xloc = Xpos(rng);
 	yloc = Ypos(rng);
 	FoodLoc = { xloc, yloc };
@@ -23,9 +20,10 @@ void Food::respawn(Snake& snake)
 	} while (snake.PreventFoodSpawnInBody(FoodLoc) || FoodLoc == snake.getHeadLocation());
 }
 
+
 bool Food::isEaten(const Snake& snake)
 {
-	//sound.setBuffer(soundbuffer);
+
 	if (snake.getHeadLocation() == FoodLoc) {
 		sound.openFromFile("EatenSound.wav");
 		sound.play();

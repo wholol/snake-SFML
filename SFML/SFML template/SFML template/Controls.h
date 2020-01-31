@@ -10,8 +10,6 @@ public:
 	void DetermineDirection(const std::string& direction,Snake& snake);
 	Location GetDirectionVector() const;
 
-
-
 private:
 	Location ControlsLoc;
 	

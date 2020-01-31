@@ -86,6 +86,7 @@ void Snake::Segments::Follow(const Segments& next_segment)		//assign the previou
 {
 	snakeloc = next_segment.snakeloc;
 }
+
 void Snake::Segments::drawSegment(Board& brd, sf::RenderWindow& createwindow)
 {
 	 brd.DrawTiles(snakeloc, sf::Color::Green,createwindow);
