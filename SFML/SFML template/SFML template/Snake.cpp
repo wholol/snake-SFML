@@ -34,8 +34,8 @@ bool Snake::CollideItself()			//see if head collides with itself
 bool Snake::CollideWithWalls(const Board & board)		//checks if the snake collide with walls
 {
 	
-	if (segment[0].GetSegmentLocation().x >= board.GetxTilesNum() || segment[0].GetSegmentLocation().y >= board.GetyTilesNum()
-		|| segment[0].GetSegmentLocation().x < 0 || segment[0].GetSegmentLocation().y < 0) {
+	if (segment[0].GetSegmentLocation().x >= board.GetxTilesNum() - 1 || segment[0].GetSegmentLocation().y >= board.GetyTilesNum() - 1
+		|| segment[0].GetSegmentLocation().x < 1 || segment[0].GetSegmentLocation().y < 1) {
 		return true;
 	}
 	else {

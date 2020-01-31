@@ -2,8 +2,8 @@
 #pragma once
 
 Food::Food(const Board& board)
-	:Xpos(0, board.GetxTilesNum() - 1),
-	Ypos(0, board.GetyTilesNum() - 1),
+	:Xpos(1, board.GetxTilesNum() - 2),
+	Ypos(1, board.GetyTilesNum() - 2),
 	rng(std::random_device ()())
 {
 	xloc = Xpos(rng);

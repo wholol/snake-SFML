@@ -9,7 +9,7 @@ Game::Game(const int screenwidth, const int screenheight, const std::string& tit
 {
 	mainmusic.openFromFile("Harmony.ogg");
 	mainmusic.setLoop(true);
-	mainmusic.setVolume(30);
+	mainmusic.setVolume(40);
 	mainmusic.play();
 }
 
@@ -32,8 +32,8 @@ void Game::render() {		//rendering
 	}
 
 	if (!GameOver && !MainMenu) {
-		for (int i = 0; i < board.GetxTilesNum(); ++i) {
-			for (int j = 0; j < board.GetyTilesNum(); ++j) {
+		for (int i = 1; i < board.GetxTilesNum() - 1; ++i) {
+			for (int j = 1; j < board.GetyTilesNum() - 1; ++j) {
 				board.DrawTiles({ i , j }, sf::Color::Blue, createwindow);
 			}
 		}
@@ -59,7 +59,7 @@ void Game::game_over()
 	mainmusic.stop();
 	mainmusic.openFromFile("Death.wav");
 	mainmusic.setLoop(false);
-	mainmusic.setVolume(17);
+	mainmusic.setVolume(40);
 	mainmusic.play();
 	
 }
